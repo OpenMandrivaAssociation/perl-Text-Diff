@@ -8,7 +8,6 @@ Group:		Development/Perl
 Summary:    Perform diffs on files and record sets
 Source0:   http://search.cpan.org/CPAN/authors/id/R/RB/RBS/%{realname}-%{version}.tar.bz2 
 Url:		http://www.cpan.org
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
 BuildRequires:  perl-Algorithm-Diff
 BuildArch:      noarch
