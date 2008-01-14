@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:	0.35
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Perform diffs on files and record sets
