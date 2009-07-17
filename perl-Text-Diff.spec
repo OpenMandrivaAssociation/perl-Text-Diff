@@ -1,17 +1,19 @@
-%define realname	Text-Diff
+%define upstream_name	 Text-Diff
+%define upstream_version 1.37
 
-Name:		perl-%{realname}
-Version:	0.35
-Release:	%mkrel 6
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:    Perform diffs on files and record sets
-Source0:   http://search.cpan.org/CPAN/authors/id/R/RB/RBS/%{realname}-%{version}.tar.bz2 
+License:	GPL+ or Artistic
+Group:		Development/Perl
 Url:		http://www.cpan.org
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+Source0:    http://search.cpan.org/CPAN/authors/id/R/RB/RBS/%{upstream_name}-%{upstream_version}.tar.gz 
+
 BuildRequires:  perl-Algorithm-Diff
-BuildArch:      noarch
+BuildArch:  noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 %name provides a basic set of services akin to the GNU diff utility.
@@ -22,7 +24,7 @@ It is often faster than shelling out to a system's diff
 executable for small files, and generally slower on larger files.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -42,5 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
 
