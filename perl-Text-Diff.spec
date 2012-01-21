@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 2
+Release:	%mkrel 3
 
 Summary:    Perform diffs on files and record sets
 License:	GPL+ or Artistic
