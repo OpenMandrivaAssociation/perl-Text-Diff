@@ -1,14 +1,14 @@
 %define modname	Text-Diff
-%define modver	1.41
+%define modver	1.45
 
 Summary:	Perform diffs on files and record sets
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	15
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://www.cpan.org
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RB/RBS/%{modname}-%{modver}.tar.gz 
+Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/%{modname}-%{modver}.tar.gz 
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-Algorithm-Diff
