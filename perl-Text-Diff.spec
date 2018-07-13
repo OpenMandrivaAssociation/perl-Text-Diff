@@ -10,6 +10,8 @@ Group:		Development/Perl
 Url:		http://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/%{modname}-%{modver}.tar.gz 
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 BuildRequires:	perl-Algorithm-Diff
 
