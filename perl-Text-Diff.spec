@@ -4,10 +4,10 @@
 Summary:	Perform diffs on files and record sets
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://www.cpan.org
+Url:		http://metacpan.org/pod/Text::Diff
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/%{modname}-%{modver}.tar.gz 
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
