@@ -4,7 +4,7 @@
 Summary:	Perform diffs on files and record sets
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	5
+Release:	6
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Text::Diff
