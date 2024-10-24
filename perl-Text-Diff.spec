@@ -1,14 +1,13 @@
 %define modname	Text-Diff
-%define modver	1.45
 
 Summary:	Perform diffs on files and record sets
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	7
+Version:	1.45
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Text::Diff
-Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/%{modname}-%{modver}.tar.gz 
+Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/%{modname}-%{version}.tar.gz 
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test)
@@ -24,19 +23,18 @@ It is often faster than shelling out to a system's diff
 executable for small files, and generally slower on larger files.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
